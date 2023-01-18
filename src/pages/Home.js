@@ -8,7 +8,7 @@ export default function Home() {
 
 
     React.useEffect(()=> {
-        Axios.get("http://localhost:3001/")		
+        Axios.get("https://desolate-earth-13157.herokuapp.com/")		
             .then(res => setData(res.data))
             .catch(err=> console.log("ERROR: " + err))
     },[])
