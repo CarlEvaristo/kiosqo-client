@@ -6,9 +6,15 @@ import NewsList from '../components/NewsList'
 export default function Home() {
     const [data, setData] = React.useState()
 
+    const url = "https://desolate-earth-13157.herokuapp.com/"
+    const config = {
+        headers:{
+          beKey: "vnrejfvfoj430hfih4f4hui43hfui43hfuh4pqkdowqdjkwq",
+        }
+      };
 
     React.useEffect(()=> {
-        Axios.get("https://desolate-earth-13157.herokuapp.com/")		
+        Axios.get(url, config)		
             .then(res => setData(res.data))
             .catch(err=> console.log("ERROR: " + err))
     },[])
